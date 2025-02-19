@@ -1,0 +1,29 @@
+O que falta:
+Connector_Github
+- Qual é o nome que se dá ao logger dentro do conector
+
+- A função upload_file cria ou atualiza ficheiros num dado repo e branch, deve conseguir atualizar ficheiros (escrever por cima de um outro, se tiver o mesmo nome?)
+
+- Precisamos de uma função para gerar tokens? Nope
+
+- Criar uma função para listar os repositórios disponíveis
+
+Backend
+- No backend, defino a org 'Closer-Smart4' como uma env var (ou na library) porque os uploads vão ser sempre para aí?
+
+- O orquestrador no estado atual pede muitas coisas (repo, branch, etc) porque não existe um contexto no endpoint (logo para se fazer o upload tem que se definir para onde é que este vai especificamente); as funções dentro do orquestrador não pedem o repo/branch repetidamente, mas continua a ser necessário definir isso no início.
+
+
+
+Fazer:
+- Adicionar maneira de criar contextos/espaços no FastAPI (como se fosse uma pasta com métodos para o GitHub, outros para o chatbot, etc)
+
+- adicionar o get_all_branches e get_all_orgs?????
+
+
+Fiz ontem:
+Criar o orquestrador no backend
+
+Completar a biblioteca (a questão das organizações)
+
+Garantir que o README está certo quando completar a biblioteca
